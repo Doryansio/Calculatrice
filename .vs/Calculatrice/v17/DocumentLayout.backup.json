@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Calculatrice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Calculatrice\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|c:\\users\\user\\source\\repos\\calculatrice\\formcalculatrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|solutionrelative:formcalculatrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\Calculatrice\\FormCalculatrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FormCalculatrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|C:\\Users\\User\\source\\repos\\Calculatrice\\formcalculatrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|solutionrelative:formcalculatrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|c:\\users\\user\\source\\repos\\calculatrice\\memory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|solutionrelative:memory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|c:\\users\\user\\source\\repos\\calculatrice\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|solutionrelative:readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|c:\\users\\user\\source\\repos\\calculatrice\\calcul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8148272C-7E62-4DA3-9A09-6B47A17AB433}|Calculatrice.csproj|solutionrelative:calcul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Calculatrice\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Calculatrice\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:53:11.264Z",
-              "EditorCaption": ""
+              "DocumentIndex": 3,
+              "Title": "README.txt",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Calculatrice\\README.txt",
+              "RelativeDocumentMoniker": "README.txt",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Calculatrice\\README.txt",
+              "RelativeToolTip": "README.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-22T19:42:37.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Memory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Calculatrice\\Memory.cs",
+              "RelativeDocumentMoniker": "Memory.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Calculatrice\\Memory.cs",
+              "RelativeToolTip": "Memory.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T19:34:50.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Calcul.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Calculatrice\\Calcul.cs",
+              "RelativeDocumentMoniker": "Calcul.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Calculatrice\\Calcul.cs",
+              "RelativeToolTip": "Calcul.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwFMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:24:49.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FormCalculatrice.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Calculatrice\\FormCalculatrice.cs",
               "RelativeDocumentMoniker": "FormCalculatrice.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\Calculatrice\\FormCalculatrice.cs",
               "RelativeToolTip": "FormCalculatrice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwHAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T15:52:44.347Z",
+              "WhenOpened": "2025-01-22T16:17:57.194Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCalculatrice.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Calculatrice\\FormCalculatrice.cs",
+              "RelativeDocumentMoniker": "FormCalculatrice.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Calculatrice\\FormCalculatrice.cs [Conception]",
+              "RelativeToolTip": "FormCalculatrice.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:17:53.377Z"
             }
           ]
         }
