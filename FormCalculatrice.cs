@@ -1,3 +1,4 @@
+using System.Media;
 using System.Xml.XPath;
 
 namespace Calculatrice
@@ -11,7 +12,7 @@ namespace Calculatrice
 
 
             InitializeComponent();
-
+            txbCalcul.Text = "0";
             _calculate = new Calcul();
             _memory = new Memory();
         }
@@ -22,11 +23,17 @@ namespace Calculatrice
         /// <param name="e"></param>
         private void btnNumber_Click(object sender, EventArgs e)
         {
+            if (txbCalcul.Text == "0") 
+            {
+                txbCalcul.Text = string.Empty;
+            }
+            
             if (_calculate.CalculState == CalculStateEnum.BeginAquireOperand2)
             {
                 txbCalcul.Text = string.Empty;
                 _calculate.CalculState = CalculStateEnum.AquireOperand2;
             }
+            
             if (_memory.MemoryState == MemoryStateEnum.Saved)
             {
                 txbCalcul.Text = string.Empty;
@@ -102,7 +109,7 @@ namespace Calculatrice
         /// <param name="e"></param>
         private void BtnPlusMinus_Click(object sender, EventArgs e)
         {
-            if (txbCalcul.Text.Length > 0) 
+            if (txbCalcul.Text.Length > 0)
             {
                 string signe = txbCalcul.Text[0].ToString();
                 if (string.Compare(signe, "-") == 0)
@@ -111,11 +118,38 @@ namespace Calculatrice
                 {
                     // le signe - sera placé a la gauche dans le form car la proprieté righttoLeft de la txbCalcul
                     // est true
-                    txbCalcul.Text = txbCalcul.Text + "-";
-                    
+                    txbCalcul.Text = "-" + txbCalcul.Text;
+
                 }
-                MessageBox.Show(txbCalcul.Text);
+
             }
+        }
+
+        private void btnComma_Click(object sender, EventArgs e)
+        {
+            if (txbCalcul.Text.Length > 0)
+            {
+                if (txbCalcul.Text.Contains(',') == false)
+                {
+                    txbCalcul.Text = txbCalcul.Text  + ',';
+                }
+                else
+                {
+                    SystemSounds.Beep.Play();
+                }
+            }
+            else
+            {
+                txbCalcul.Text = "0," + txbCalcul.Text;
+            }
+
+        }
+
+        private void btnSqr_Click(object sender, EventArgs e)
+        {
+            long x = long.Parse(txbCalcul.Text);
+            x = (long)Math.Pow(x, 2);
+            txbCalcul.Text = x.ToString();
         }
     }
 }

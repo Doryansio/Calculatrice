@@ -65,9 +65,10 @@
             txbCalcul.Location = new Point(11, 12);
             txbCalcul.Name = "txbCalcul";
             txbCalcul.ReadOnly = true;
-            txbCalcul.RightToLeft = RightToLeft.Yes;
+            txbCalcul.RightToLeft = RightToLeft.No;
             txbCalcul.Size = new Size(253, 34);
             txbCalcul.TabIndex = 0;
+            txbCalcul.TextAlign = HorizontalAlignment.Right;
             txbCalcul.WordWrap = false;
             // 
             // btnBack
@@ -173,6 +174,7 @@
             btnSqr.TabIndex = 9;
             btnSqr.Text = "x²";
             btnSqr.UseVisualStyleBackColor = true;
+            btnSqr.Click += btnSqr_Click;
             // 
             // btnSqrt
             // 
@@ -314,6 +316,7 @@
             btnComma.TabIndex = 21;
             btnComma.Text = ",";
             btnComma.UseVisualStyleBackColor = true;
+            btnComma.Click += btnComma_Click;
             // 
             // btn0
             // 
