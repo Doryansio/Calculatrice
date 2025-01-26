@@ -13,3 +13,4 @@ comme la calcultrice scientifique, ou le convertisseur de devise.
 	- quand le form s'ouvre "0" est directement affiché dans la txb et est remplacé si l'user clique sur un bouton
 	- gestion de l'evenment permettant d'obtenir le carré d'un nombre avec la fonction Math.Pow(). les resultats de la calculatrice
 	peuvent etre hors de la plage du type double donc un cast en long a été fait.
+	- essaye d'implementation d'un label qui affiche l'operation en cours.

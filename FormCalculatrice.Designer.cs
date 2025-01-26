@@ -57,16 +57,18 @@
             btnMemoryRead = new Button();
             btnMemorySave = new Button();
             btnMemoryAdd = new Button();
+            lblInProgress = new Label();
             SuspendLayout();
             // 
             // txbCalcul
             // 
-            txbCalcul.Font = new Font("Segoe UI", 15F);
-            txbCalcul.Location = new Point(11, 12);
+            txbCalcul.BorderStyle = BorderStyle.None;
+            txbCalcul.Font = new Font("Segoe UI", 20F);
+            txbCalcul.Location = new Point(10, 37);
             txbCalcul.Name = "txbCalcul";
             txbCalcul.ReadOnly = true;
             txbCalcul.RightToLeft = RightToLeft.No;
-            txbCalcul.Size = new Size(253, 34);
+            txbCalcul.Size = new Size(253, 36);
             txbCalcul.TabIndex = 0;
             txbCalcul.TextAlign = HorizontalAlignment.Right;
             txbCalcul.WordWrap = false;
@@ -186,6 +188,7 @@
             btnSqrt.TabIndex = 10;
             btnSqrt.Text = "¹√x";
             btnSqrt.UseVisualStyleBackColor = true;
+            btnSqrt.Click += btnSqrt_Click;
             // 
             // btnMultiply
             // 
@@ -340,6 +343,7 @@
             btnDividedbyX.TabIndex = 23;
             btnDividedbyX.Text = "¹/x";
             btnDividedbyX.UseVisualStyleBackColor = true;
+            btnDividedbyX.Click += btnDividedbyX_Click;
             // 
             // btnPercent
             // 
@@ -392,11 +396,20 @@
             btnMemoryAdd.Text = "M+";
             btnMemoryAdd.UseVisualStyleBackColor = true;
             // 
+            // lblInProgress
+            // 
+            lblInProgress.AutoSize = true;
+            lblInProgress.Location = new Point(225, 19);
+            lblInProgress.Name = "lblInProgress";
+            lblInProgress.Size = new Size(0, 15);
+            lblInProgress.TabIndex = 29;
+            // 
             // FormCalculatrice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(281, 421);
+            Controls.Add(lblInProgress);
             Controls.Add(btnMemoryAdd);
             Controls.Add(btnMemorySave);
             Controls.Add(btnMemoryRead);
@@ -429,6 +442,7 @@
             Name = "FormCalculatrice";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Calculatrice";
+            Load += InProgress;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -464,5 +478,6 @@
         private Button btnMemoryRead;
         private Button btnMemorySave;
         private Button btnMemoryAdd;
+        private Label lblInProgress;
     }
 }

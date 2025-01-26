@@ -23,17 +23,17 @@ namespace Calculatrice
         /// <param name="e"></param>
         private void btnNumber_Click(object sender, EventArgs e)
         {
-            if (txbCalcul.Text == "0") 
+            if (txbCalcul.Text == "0")
             {
                 txbCalcul.Text = string.Empty;
             }
-            
+
             if (_calculate.CalculState == CalculStateEnum.BeginAquireOperand2)
             {
                 txbCalcul.Text = string.Empty;
                 _calculate.CalculState = CalculStateEnum.AquireOperand2;
             }
-            
+
             if (_memory.MemoryState == MemoryStateEnum.Saved)
             {
                 txbCalcul.Text = string.Empty;
@@ -86,6 +86,7 @@ namespace Calculatrice
 
             // Efface la txb avant d'acquerir la deuxieme operande
             _calculate.CalculState = CalculStateEnum.BeginAquireOperand2;
+
         }
         /// <summary>
         /// Supprime le dernier caractere de tbxCalcul
@@ -131,7 +132,7 @@ namespace Calculatrice
             {
                 if (txbCalcul.Text.Contains(',') == false)
                 {
-                    txbCalcul.Text = txbCalcul.Text  + ',';
+                    txbCalcul.Text = txbCalcul.Text + ',';
                 }
                 else
                 {
@@ -150,6 +151,30 @@ namespace Calculatrice
             long x = long.Parse(txbCalcul.Text);
             x = (long)Math.Pow(x, 2);
             txbCalcul.Text = x.ToString();
+        }
+
+        private void btnSqrt_Click(object sender, EventArgs e)
+        {
+            double x = double.Parse(txbCalcul.Text);
+            x = Math.Sqrt(x);
+            txbCalcul.Text = x.ToString();
+
+        }
+
+        private void btnDividedbyX_Click(object sender, EventArgs e)
+        {
+            double result;
+            double operande1 = 1;
+            double x = double.Parse(txbCalcul.Text);
+
+            result = operande1 / x;
+            txbCalcul.Text = result.ToString();
+
+        }
+
+        private void InProgress(object sender, EventArgs e)
+        {
+            lblInProgress.Text = string.Format("{0}" + "Hello wolrd!");
         }
     }
 }
