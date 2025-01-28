@@ -58,6 +58,7 @@
             btnMemorySave = new Button();
             btnMemoryAdd = new Button();
             lblInProgress = new Label();
+            lblMemory = new Label();
             SuspendLayout();
             // 
             // txbCalcul
@@ -94,6 +95,7 @@
             btnClearAll.TabIndex = 2;
             btnClearAll.Text = "C";
             btnClearAll.UseVisualStyleBackColor = true;
+            btnClearAll.Click += btnClearAll_Click;
             // 
             // btnClearOperand
             // 
@@ -105,6 +107,7 @@
             btnClearOperand.TabIndex = 3;
             btnClearOperand.Text = "CE";
             btnClearOperand.UseVisualStyleBackColor = true;
+            btnClearOperand.Click += btnClearOperand_Click;
             // 
             // button4
             // 
@@ -366,6 +369,7 @@
             btnMemoryClear.TabIndex = 25;
             btnMemoryClear.Text = "MC";
             btnMemoryClear.UseVisualStyleBackColor = true;
+            btnMemoryClear.Click += btnMemoryClear_Click;
             // 
             // btnMemoryRead
             // 
@@ -376,6 +380,7 @@
             btnMemoryRead.TabIndex = 26;
             btnMemoryRead.Text = "MR";
             btnMemoryRead.UseVisualStyleBackColor = true;
+            btnMemoryRead.Click += btnMemoryRead_Click;
             // 
             // btnMemorySave
             // 
@@ -386,6 +391,7 @@
             btnMemorySave.TabIndex = 27;
             btnMemorySave.Text = "MS";
             btnMemorySave.UseVisualStyleBackColor = true;
+            btnMemorySave.Click += btnMemorySave_Click;
             // 
             // btnMemoryAdd
             // 
@@ -396,6 +402,7 @@
             btnMemoryAdd.TabIndex = 28;
             btnMemoryAdd.Text = "M+";
             btnMemoryAdd.UseVisualStyleBackColor = true;
+            btnMemoryAdd.Click += btnMemoryAdd_Click;
             // 
             // lblInProgress
             // 
@@ -405,11 +412,20 @@
             lblInProgress.Size = new Size(0, 15);
             lblInProgress.TabIndex = 29;
             // 
+            // lblMemory
+            // 
+            lblMemory.AutoSize = true;
+            lblMemory.Location = new Point(14, 19);
+            lblMemory.Name = "lblMemory";
+            lblMemory.Size = new Size(0, 15);
+            lblMemory.TabIndex = 30;
+            // 
             // FormCalculatrice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(281, 421);
+            Controls.Add(lblMemory);
             Controls.Add(lblInProgress);
             Controls.Add(btnMemoryAdd);
             Controls.Add(btnMemorySave);
@@ -479,5 +495,6 @@
         private Button btnMemorySave;
         private Button btnMemoryAdd;
         private Label lblInProgress;
+        private Label lblMemory;
     }
 }

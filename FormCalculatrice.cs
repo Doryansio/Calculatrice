@@ -53,11 +53,13 @@ namespace Calculatrice
         /// <param name="e"></param>
         private void btnOperand_click(object sender, EventArgs e)
         {
+            string sNumber = txbCalcul.Text;
             string sOperand = (sender as Button).Text;
             _calculate.Operation = sOperand;
 
             if (_calculate.CalculState == CalculStateEnum.AquireOperand1)
             {
+                lblInProgress.Text = String.Format("{0}{1}", sNumber, sOperand);
                 double result;
                 try
                 {
@@ -70,7 +72,7 @@ namespace Calculatrice
 
                 }
             }
-            
+
         }
         /// <summary>
         /// Supprime le dernier caractere de tbxCalcul
@@ -86,7 +88,7 @@ namespace Calculatrice
                 // txbCalcul.Text = txbCalcul.Text[..(txbCalcul.TextLength - 1)];
             }
         }
-
+        #region operations diverse
         /// <summary>
         /// inverse la valeur de la txbCalcul 
         /// </summary>
@@ -156,11 +158,6 @@ namespace Calculatrice
 
         }
 
-        private void InProgress(object sender, EventArgs e)
-        {
-            lblInProgress.Text = string.Format("{0}" + "Hello wolrd!");
-        }
-
         private void BtnEquals_Click(object sender, EventArgs e)
         {
             if (_calculate.CalculState == CalculStateEnum.AquireOperand2)
@@ -178,13 +175,16 @@ namespace Calculatrice
 
                 }
             }
-            if(_calculate.CalculState == CalculStateEnum.BeginAquireOperand2)
+            if (_calculate.CalculState == CalculStateEnum.BeginAquireOperand2)
             {
                 _calculate.CalculState = CalculStateEnum.Calculation;
             }
-            if(_calculate.CalculState == CalculStateEnum.Calculation)
+            if (_calculate.CalculState == CalculStateEnum.Calculation)
             {
+                string sNumber = txbCalcul.Text;
+                string eOperateur = (sender as Button).Text;
                 double result = _calculate.Calculate();
+                lblInProgress.Text += String.Format("{0}{1}", sNumber, eOperateur);
                 txbCalcul.Text = result.ToString();
 
                 // le resultat devient l'operande numero 1
@@ -194,5 +194,72 @@ namespace Calculatrice
                 _calculate.CalculState = CalculStateEnum.BeginAquireOperand2;
             }
         }
+
+        #endregion
+
+        
+
+        #region Clear Buttons
+
+        private void btnClearOperand_Click(object sender, EventArgs e)
+        {
+            txbCalcul.Text = "0";
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            _calculate = new Calcul();
+            txbCalcul.Text = "0";
+        }
+        #endregion
+
+        #region Memory
+
+        private void btnMemorySave_Click(object sender, EventArgs e)
+        {
+            if (txbCalcul.Text.Length > 0)
+            {
+                try
+                {
+                    _memory.Memory1 = Double.Parse(txbCalcul.Text);
+                    _memory.MemoryState = MemoryStateEnum.Saved;
+                    lblMemory.Text = "M";
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
+        }
+        private void btnMemoryAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _memory.Memory1 += Double.Parse(txbCalcul.Text);
+                _memory.MemoryState = MemoryStateEnum.Saved;
+                lblMemory.Text = "M";
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnMemoryRead_Click(object sender, EventArgs e)
+        {
+            txbCalcul.Text = _memory.Memory1.ToString();
+            _memory.MemoryState = MemoryStateEnum.Saved;
+
+            //Memoire est affiché on demande l'operande suivante
+            _calculate.CalculState = CalculStateEnum.AquireOperand2;
+        }
+
+        private void btnMemoryClear_Click(object sender, EventArgs e)
+        {
+            lblMemory.Text = "";
+            _memory = new Memory();
+        }
+        #endregion
     }
 }
