@@ -308,6 +308,7 @@
             BtnEquals.TabIndex = 20;
             BtnEquals.Text = "=";
             BtnEquals.UseVisualStyleBackColor = true;
+            BtnEquals.Click += BtnEquals_Click;
             // 
             // btnComma
             // 
@@ -442,7 +443,6 @@
             Name = "FormCalculatrice";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Calculatrice";
-            Load += InProgress;
             ResumeLayout(false);
             PerformLayout();
         }

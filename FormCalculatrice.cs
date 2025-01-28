@@ -70,23 +70,7 @@ namespace Calculatrice
 
                 }
             }
-            if (_calculate.CalculState == CalculStateEnum.BeginAquireOperand2)
-            {
-                _calculate.CalculState = CalculStateEnum.Calculation;
-            }
-            if (_calculate.CalculState == CalculStateEnum.Calculation)
-            {
-                double result = _calculate.Calculate();
-                txbCalcul.Text = result.ToString();
-
-                // le resultat devient l'operande 1
-
-                _calculate.Operand1 = result;
-            }
-
-            // Efface la txb avant d'acquerir la deuxieme operande
-            _calculate.CalculState = CalculStateEnum.BeginAquireOperand2;
-
+            
         }
         /// <summary>
         /// Supprime le dernier caractere de tbxCalcul
@@ -175,6 +159,40 @@ namespace Calculatrice
         private void InProgress(object sender, EventArgs e)
         {
             lblInProgress.Text = string.Format("{0}" + "Hello wolrd!");
+        }
+
+        private void BtnEquals_Click(object sender, EventArgs e)
+        {
+            if (_calculate.CalculState == CalculStateEnum.AquireOperand2)
+            {
+                double result;
+
+                try
+                {
+                    result = Double.Parse(txbCalcul.Text);
+                    _calculate.Operand2 = result;
+                    _calculate.CalculState = CalculStateEnum.Calculation;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            if(_calculate.CalculState == CalculStateEnum.BeginAquireOperand2)
+            {
+                _calculate.CalculState = CalculStateEnum.Calculation;
+            }
+            if(_calculate.CalculState == CalculStateEnum.Calculation)
+            {
+                double result = _calculate.Calculate();
+                txbCalcul.Text = result.ToString();
+
+                // le resultat devient l'operande numero 1
+                _calculate.Operand1 = result;
+
+                // effacer avant d'aquerir la deuxieme operande
+                _calculate.CalculState = CalculStateEnum.BeginAquireOperand2;
+            }
         }
     }
 }
