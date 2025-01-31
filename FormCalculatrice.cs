@@ -137,8 +137,8 @@ namespace Calculatrice
         private void btnSqr_Click(object sender, EventArgs e)
         {
             
-            long x = long.Parse(txbCalcul.Text);
-            long result = (long)Math.Pow(x, 2);
+            double x = Double.Parse(txbCalcul.Text);
+            double result = (double)Math.Pow(x, 2);
             txbCalcul.Text = result.ToString();
             lblInProgress.Text = string.Format("sqr({0})", x.ToString());
         }
@@ -195,10 +195,11 @@ namespace Calculatrice
 
                 // le resultat devient l'operande numero 1
                 _calculate.Operand1 = result;
-                lblInProgress.Text = String.Empty;
+                
 
                 // effacer avant d'aquerir la deuxieme operande
-                _calculate.CalculState = CalculStateEnum.BeginAquireOperand2;
+                _calculate.CalculState = CalculStateEnum.AquireOperand1;
+                
             }
         }
 

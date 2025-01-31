@@ -14,5 +14,7 @@ comme la calcultrice scientifique, ou le convertisseur de devise.
 	- gestion de l'evenment permettant d'obtenir le carré d'un nombre avec la fonction Math.Pow(). les resultats de la calculatrice
 	peuvent etre hors de la plage du type double donc un cast en long a été fait.
 	- essaye d'implementation d'un label qui affiche l'operation en cours.
-	-implementation réalisé mais le label ne se reinitialise pas a chauque calcul => (en cours....)
-	-modification des events racine carré et sqr, le resultat etait dans le label et dans la txb.
+	-implementation réalisé mais le label ne se reinitialise pas a chauque calcul => (en cours....) fin
+	il fallait mettre l'enum a AcquireOperand1
+	-modification des events racine carré et sqr, le resultat etait dans le label et dans la txb. mais les labels long
+	sortent du form calculatrice
