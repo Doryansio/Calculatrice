@@ -13,6 +13,7 @@ namespace Calculatrice
 
             InitializeComponent();
             txbCalcul.Text = "0";
+            lblInProgress.Text = "";
             _calculate = new Calcul();
             _memory = new Memory();
         }
@@ -53,6 +54,7 @@ namespace Calculatrice
         /// <param name="e"></param>
         private void btnOperand_click(object sender, EventArgs e)
         {
+            
             string sNumber = txbCalcul.Text;
             string sOperand = (sender as Button).Text;
             _calculate.Operation = sOperand;
@@ -134,16 +136,19 @@ namespace Calculatrice
 
         private void btnSqr_Click(object sender, EventArgs e)
         {
+            
             long x = long.Parse(txbCalcul.Text);
-            x = (long)Math.Pow(x, 2);
-            txbCalcul.Text = x.ToString();
+            long result = (long)Math.Pow(x, 2);
+            txbCalcul.Text = result.ToString();
+            lblInProgress.Text = string.Format("sqr({0})", x.ToString());
         }
 
         private void btnSqrt_Click(object sender, EventArgs e)
         {
             double x = double.Parse(txbCalcul.Text);
-            x = Math.Sqrt(x);
-            txbCalcul.Text = x.ToString();
+            double result = Math.Sqrt(x);
+            txbCalcul.Text = result.ToString();
+            lblInProgress.Text = string.Format("sqrt({0})", x.ToString());
 
         }
 
@@ -155,6 +160,7 @@ namespace Calculatrice
 
             result = operande1 / x;
             txbCalcul.Text = result.ToString();
+            lblInProgress.Text = string.Format("{0}/{1}", operande1.ToString(), x.ToString());
 
         }
 
@@ -189,6 +195,7 @@ namespace Calculatrice
 
                 // le resultat devient l'operande numero 1
                 _calculate.Operand1 = result;
+                lblInProgress.Text = String.Empty;
 
                 // effacer avant d'aquerir la deuxieme operande
                 _calculate.CalculState = CalculStateEnum.BeginAquireOperand2;
@@ -210,6 +217,7 @@ namespace Calculatrice
         {
             _calculate = new Calcul();
             txbCalcul.Text = "0";
+            lblInProgress.Text = string.Empty;
         }
         #endregion
 
